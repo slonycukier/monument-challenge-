@@ -33,8 +33,9 @@ a {
   width: 100%;
   min-height: 100vh;
   overflow: hidden;
-  background: url(/images/colosseum.png);
-  background-size: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .container {
@@ -50,14 +51,14 @@ header .container {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-top: 25px;
+  margin-top: 20px;
 }
 
 .logo {
   display: flex;
   align-items: center;
   cursor: pointer;
-  size: 20px;
+  width: 100px;
 }
 
 .links ul {
@@ -67,13 +68,12 @@ header .container {
 }
 
 .links a {
-  color: var(--darkOne);
+  color: var(--mainColor);
   margin-left: 4.5rem;
   display: inline-block;
-
-  font-weight: 400;
+  font-weight: 600;
   font-family: "poppins";
-  font-size: 14px;
+  font-size: 15px;
 }
 
 .links a:hover {
@@ -95,4 +95,53 @@ header .container {
 .btn:hover {
   background-color: var(--hooverColor);
   transform: scale(1) !important;
+}
+
+.showcase-area .container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+  justify-content: center;
+}
+
+.big-title {
+  font-size: 1.4rem;
+  color: var(--darkOne);
+  text-transform: capitalize;
+  line-height: 1.4;
+}
+
+.text {
+  color: var(--mainColor);
+  font-family: "poppins";
+  margin: 1.9rem 1.1rem 2.5rem 0;
+  max-width: 600px;
+  line-height: 2;
+}
+
+.showcase-area .btn {
+  font-family: "poppins";
+}
+
+.toggle-btn {
+  display: inline-block;
+  margin: 0 auto;
+  border: none;
+  background: var(--darkTwo);
+  color: var(--backgroundColor);
+  outline: none;
+  cursor: pointer;
+  height: 39px;
+  width: 39px;
+  border-radius: 55%;
+  font-size: 1.1rem;
+}
+
+.toggle-btn {
+  line-height: 39px;
+  
+}
+
+.toggle-btn i:last-child {
+  display: none;
 }
